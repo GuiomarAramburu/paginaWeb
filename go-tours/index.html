@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Investigacion Maternidad</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light text-capitalize">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="imgs/logo.png" alt="#" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#show-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="show-menu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>     
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <header id="home">
+            <div class="overlay">
+                <div class="container">
+                    <div>
+                        <h1><span>Maternidad</span><br></h1>
+						<h2>Aprendiendo más</h2>
+                        <p>Bienvenida a la pagina FALTA</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="about-us" id="about">
+            <div class="small-container">
+                <h2 class="text-center">Guiomar <span>Aramburu</span></h2>
+                <p class="text-center">Psicóloga e Investigadora</p>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-12 text-center">
+                                <div class="item">
+                                    <img src="imgs/img2.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="imgs/img1.jpg">
+                                </div>
+                                <div class="item">
+                                    <img src="imgs/img3.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12 text-right">
+                                <h4 class="text-uppercase">Sobre mí</h4>
+                                <p>FALTA TEXTO</p>
+                                <button class="text-center"><a href="mailto:inv.maternidad.psicologia@gmail.com?Subject=Información%20sobre%20la%20investigación" class="text-capitalize">Contacto</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </div>
+                 
+        
+        <footer>
+            <div class="copyright text-center">
+                <p>Máster Universitario en Psicología General Sanitaria por la Universidad Europea de Madrid</p>
+            </div>
+        </footer>
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                
+                'use strict';
+                
+                var winH = $(window).height();
+                
+                $('header').height(winH);  
+                
+                $('header .container > div').css('top', (winH / 2) - ( $('header .container > div').height() / 2));
+                
+                $('.navbar ul li a.search').on('click', function (e) {
+                    e.preventDefault();
+                });
+                $('.navbar a.search').on('click', function () {
+                    $('.navbar form').fadeToggle();
+                });
+                
+                $('.navbar ul.navbar-nav li a').on('click', function (e) {
+                    
+                    var getAttr = $(this).attr('href');
+                    
+                    e.preventDefault();
+                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+                });
+            })
+        </script>
+    </body>
+</html>
